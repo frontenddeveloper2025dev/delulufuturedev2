@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+}<!DOCTYPE html>
 <html lang="es" class="h-full">
   <head>
     <meta charset="UTF-8" />
@@ -86,92 +86,110 @@
         }
       }
 
-      /* Pixelated particles */
+      /* Arcade character particles */
       .particle {
         position: fixed;
         pointer-events: none;
         z-index: 1;
-        opacity: 0.6;
-        animation: invaderMove 10s infinite linear;
+        opacity: 0.8;
+        animation: float-around 15s infinite ease-in-out;
         image-rendering: pixelated;
+        filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.6));
       }
 
-      @keyframes invaderMove {
-        0% {
-          transform: translate(0, 0);
+      @keyframes float-around {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
         }
         25% {
-          transform: translate(100px, 50px);
+          transform: translate(80px, -60px) rotate(5deg);
         }
         50% {
-          transform: translate(100px, 150px);
+          transform: translate(40px, 100px) rotate(-5deg);
         }
         75% {
-          transform: translate(0, 200px);
+          transform: translate(-50px, 40px) rotate(3deg);
         }
-        100% {
-          transform: translate(0, 0);
-        }
+      }
+
+      .particle img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: brightness(1.1) contrast(1.1);
       }
 
       .particle-1 {
-        width: 40px;
-        height: 30px;
-        background: linear-gradient(
-          var(--neon-green) 0%,
-          var(--neon-green) 20%,
-          transparent 20%,
-          transparent 40%,
-          var(--neon-green) 40%,
-          var(--neon-green) 60%,
-          transparent 60%,
-          transparent 80%,
-          var(--neon-green) 80%
-        );
-        box-shadow: 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
-        top: 10%;
-        left: 10%;
+        width: 80px;
+        height: 80px;
+        top: 8%;
+        left: 5%;
+        animation-duration: 18s;
         animation-delay: 0s;
       }
 
       .particle-2 {
-        width: 40px;
-        height: 30px;
-        background: linear-gradient(
-          var(--neon-pink) 0%,
-          var(--neon-pink) 20%,
-          transparent 20%,
-          transparent 40%,
-          var(--neon-pink) 40%,
-          var(--neon-pink) 60%,
-          transparent 60%,
-          transparent 80%,
-          var(--neon-pink) 80%
-        );
-        box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
-        top: 50%;
-        right: 15%;
-        animation-delay: 3s;
+        width: 90px;
+        height: 90px;
+        top: 15%;
+        right: 8%;
+        animation-duration: 20s;
+        animation-delay: 2s;
       }
 
       .particle-3 {
-        width: 40px;
-        height: 30px;
-        background: linear-gradient(
-          var(--neon-cyan) 0%,
-          var(--neon-cyan) 20%,
-          transparent 20%,
-          transparent 40%,
-          var(--neon-cyan) 40%,
-          var(--neon-cyan) 60%,
-          transparent 60%,
-          transparent 80%,
-          var(--neon-cyan) 80%
-        );
-        box-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan);
-        bottom: 30%;
-        left: 20%;
+        width: 75px;
+        height: 75px;
+        top: 40%;
+        left: 10%;
+        animation-duration: 16s;
+        animation-delay: 4s;
+      }
+
+      .particle-4 {
+        width: 85px;
+        height: 85px;
+        top: 60%;
+        right: 12%;
+        animation-duration: 19s;
+        animation-delay: 1s;
+      }
+
+      .particle-5 {
+        width: 70px;
+        height: 70px;
+        bottom: 25%;
+        left: 15%;
+        animation-duration: 17s;
+        animation-delay: 3s;
+      }
+
+      .particle-6 {
+        width: 80px;
+        height: 80px;
+        bottom: 15%;
+        right: 10%;
+        animation-duration: 21s;
+        animation-delay: 5s;
+      }
+
+      .particle-7 {
+        width: 75px;
+        height: 75px;
+        top: 30%;
+        right: 20%;
+        animation-duration: 18s;
         animation-delay: 6s;
+      }
+
+      .particle-8 {
+        width: 85px;
+        height: 85px;
+        bottom: 40%;
+        left: 8%;
+        animation-duration: 20s;
+        animation-delay: 7s;
       }
 
       /* Content wrapper */
@@ -1453,9 +1471,63 @@
   </head>
   <body class="h-full">
     <div class="gradient-bg"></div>
-    <div class="particle particle-1"></div>
-    <div class="particle particle-2"></div>
-    <div class="particle particle-3"></div>
+    <!-- Arcade Characters Floating -->
+    <div class="particle particle-1">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(1).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
+    <div class="particle particle-2">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(2).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
+    <div class="particle particle-3">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(3).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
+    <div class="particle particle-4">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(4).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
+    <div class="particle particle-5">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(5).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
+    <div class="particle particle-6">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(7).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
+    <div class="particle particle-7">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(8).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
+    <div class="particle particle-8">
+      <img
+        src="https://raw.githubusercontent.com/frontenddeveloper2025dev/delulufuturedev2/refs/heads/main/arcade%20(10).png"
+        alt="Arcade Character"
+        onerror="this.style.display='none';"
+      />
+    </div>
     <!-- Navigation Menu -->
     <nav class="nav-menu">
       <div class="nav-logo">D.F.D</div>
@@ -2601,7 +2673,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'9b4f8dacc0fbeef2',t:'MTc2NjkwOTEzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9b4f9af60085eef2',t:'MTc2NjkwOTY3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }
